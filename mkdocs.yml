@@ -1,0 +1,9 @@
+site_name: Formly Docs
+theme: readthedocs
+site_url: https://docs.formlyapp.com
+repo_url: https://github.com/SolidStateGroup/formly-docs
+
+pages:
+  - Overview and Setup: index.md
+  - Projects: projects.md
+  - Advanced: advanced.md
