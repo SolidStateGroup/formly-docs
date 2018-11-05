@@ -1,0 +1,49 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Overview\n\n\nFormly simplifies form submission for your website. Set up a form, submit it to us and we'll send you all of the data in an email. No need for setting up a backend server or an email service. We take care of all of that for you.\n\n\nSetup\n\n\nThere are three ways to submit a form to us.\n\n\n1. Change the action of your form to point to us. You will need to set up a project on the Formly \nsite\n. You can find out more about projects in these docs \nhere\n.\n\n\nform action=\nhttps://formlyapp.com/your-project\n\n\n\n\n\n2. Send form data to us asychronously as either JSON or as a serialized string. You will need to set up a project on the Formly \nsite\n.\n\n\n$.ajax({\n    url: 'https://formlyapp.com/your-project',\n    type: 'POST',\n    data: $('#my-form').serialize(),\n    success: function (data) {\n        alert('Submitted: ' + JSON.stringify(data));\n    },\n    error: function (xhr) {\n        alert('Error: ' + JSON.stringify(xhr.responseText));\n    }\n});\n\n\n\n\n3. Use hidden form fields to submit forms to us anonymously. You don't need a project for this. You can also send these hidden configuration fields to us asychronously instead.\n\n\nform action=\nhttps://formlyapp.com/custom\n\n    ...\n    \ninput type=\nhidden\n name=\nconfig[to]\n value=\nyour@email.com\n/\n\n    \ninput type=\nhidden\n name=\nconfig[from]\n value=\nyour@website.com\n/\n\n    \ninput type=\nhidden\n name=\nconfig[subject]\n value=\nMy Website Form\n/\n\n\n/form", 
+            "title": "Overview and Setup"
+        }, 
+        {
+            "location": "/#overview", 
+            "text": "Formly simplifies form submission for your website. Set up a form, submit it to us and we'll send you all of the data in an email. No need for setting up a backend server or an email service. We take care of all of that for you.", 
+            "title": "Overview"
+        }, 
+        {
+            "location": "/#setup", 
+            "text": "There are three ways to submit a form to us.  1. Change the action of your form to point to us. You will need to set up a project on the Formly  site . You can find out more about projects in these docs  here .  form action= https://formlyapp.com/your-project   2. Send form data to us asychronously as either JSON or as a serialized string. You will need to set up a project on the Formly  site .  $.ajax({\n    url: 'https://formlyapp.com/your-project',\n    type: 'POST',\n    data: $('#my-form').serialize(),\n    success: function (data) {\n        alert('Submitted: ' + JSON.stringify(data));\n    },\n    error: function (xhr) {\n        alert('Error: ' + JSON.stringify(xhr.responseText));\n    }\n});  3. Use hidden form fields to submit forms to us anonymously. You don't need a project for this. You can also send these hidden configuration fields to us asychronously instead.  form action= https://formlyapp.com/custom \n    ...\n     input type= hidden  name= config[to]  value= your@email.com / \n     input type= hidden  name= config[from]  value= your@website.com / \n     input type= hidden  name= config[subject]  value= My Website Form /  /form", 
+            "title": "Setup"
+        }, 
+        {
+            "location": "/projects/", 
+            "text": "Creating a project\n\n\nGo to the Formly \nsite\n, click Login, Don't have an account? and then fill up the form to register. You will be presented with the create project page. Type in a name and create your first project.\n\n\n\n\nThis will take you directly into the form settings page. Here you can configure how we will send your form data, reCAPTCHA verification and more. At the top is an example of a typical feedback form that has the action pointing to us.\n\n\nForm settings\n\n\nFill in the Subject, From and To fields. All three fields are required for successful form submission however the from field can be sent as part of your form data instead.\n\n\n\n\nClick Save. Submit your form data to us using the project ID found in the example form action and you will get an email containing your form data.\n\n\nYou will have noticed there were more options available to you below the To field.\n\n\nStore form responses?\n - Enabling this will store responses to your form with us. This means you do not necessarily need to go through your email to look back on a forms response history.\n\n\nEnable reCAPTCHA verification?\n - Enabling this will allow you to use Google's reCAPTCHA field for securing your form against spam. All you need to provide us with is your secret key.\n\n\nInclude referer?\n - Enabling this will add a field named \"referer\" to your form data that shows the page URL that they submitted the form from.\n\n\nProject settings\n\n\nHere you can change the name of your project (but never it's ID), delete it or invite other users by email address.", 
+            "title": "Projects"
+        }, 
+        {
+            "location": "/projects/#creating-a-project", 
+            "text": "Go to the Formly  site , click Login, Don't have an account? and then fill up the form to register. You will be presented with the create project page. Type in a name and create your first project.   This will take you directly into the form settings page. Here you can configure how we will send your form data, reCAPTCHA verification and more. At the top is an example of a typical feedback form that has the action pointing to us.", 
+            "title": "Creating a project"
+        }, 
+        {
+            "location": "/projects/#form-settings", 
+            "text": "Fill in the Subject, From and To fields. All three fields are required for successful form submission however the from field can be sent as part of your form data instead.   Click Save. Submit your form data to us using the project ID found in the example form action and you will get an email containing your form data.  You will have noticed there were more options available to you below the To field.  Store form responses?  - Enabling this will store responses to your form with us. This means you do not necessarily need to go through your email to look back on a forms response history.  Enable reCAPTCHA verification?  - Enabling this will allow you to use Google's reCAPTCHA field for securing your form against spam. All you need to provide us with is your secret key.  Include referer?  - Enabling this will add a field named \"referer\" to your form data that shows the page URL that they submitted the form from.", 
+            "title": "Form settings"
+        }, 
+        {
+            "location": "/projects/#project-settings", 
+            "text": "Here you can change the name of your project (but never it's ID), delete it or invite other users by email address.", 
+            "title": "Project settings"
+        }, 
+        {
+            "location": "/advanced/", 
+            "text": "reCAPTCHA Setup\n\n\nThis will guide you through getting Google reCAPTCHA working with Formly. If you already have a reCAPTCHA field in your form you can skip to step 2.\n\n\n\n\nRegister a new site at https://www.google.com/recaptcha/admin. Choose 'reCAPTCHA v2' as your type. Specify the domains that are valid for hosting the reCAPTCHA i.e. your website domain.\n\n\n\n\n\n\nOnce registered, you will receive two keys. The site key which will be used in your form and the secret key which you will add to your project on Formly.\n\n\n\n\nAdd the reCAPTCHA widget to your form. There is an example of how to do this on the site. For static websites that do not use a library that controls the rendering of markup such as React, the best way is to paste this snippet before the closing \n/head\n tag on your site:\n\n\n\n\nscript src='https://www.google.com/recaptcha/api.js'\n/script\n\n\n\n\n\nPaste this snippet inside of your \nform\n tags where you want the reCAPTCHA widget to appear:\n\n\ndiv class=\ng-recaptcha\n data-sitekey=\nyour-site-key\n/div\n\n\n\n\n\nReplace the \ndata-sitekey\n attribute value with your site key.\n\n\nFor libraries like React you will need to make use of a module that loads the reCAPTCHA script asynchronously. We recommend \nreact-google-recaptcha\n.", 
+            "title": "Advanced"
+        }, 
+        {
+            "location": "/advanced/#recaptcha-setup", 
+            "text": "This will guide you through getting Google reCAPTCHA working with Formly. If you already have a reCAPTCHA field in your form you can skip to step 2.   Register a new site at https://www.google.com/recaptcha/admin. Choose 'reCAPTCHA v2' as your type. Specify the domains that are valid for hosting the reCAPTCHA i.e. your website domain.    Once registered, you will receive two keys. The site key which will be used in your form and the secret key which you will add to your project on Formly.   Add the reCAPTCHA widget to your form. There is an example of how to do this on the site. For static websites that do not use a library that controls the rendering of markup such as React, the best way is to paste this snippet before the closing  /head  tag on your site:   script src='https://www.google.com/recaptcha/api.js' /script   Paste this snippet inside of your  form  tags where you want the reCAPTCHA widget to appear:  div class= g-recaptcha  data-sitekey= your-site-key /div   Replace the  data-sitekey  attribute value with your site key.  For libraries like React you will need to make use of a module that loads the reCAPTCHA script asynchronously. We recommend  react-google-recaptcha .", 
+            "title": "reCAPTCHA Setup"
+        }
+    ]
+}
