@@ -114,12 +114,12 @@
 <h2 id="setup">Setup</h2>
 <p>There are three ways to submit a form to us.</p>
 <p>1. Change the action of your form to point to us. You will need to set up a project on the Formly <a href="https://formlyapp.com">site</a>. You can find out more about projects in these docs <a href="projects/">here</a>.</p>
-<pre><code>&lt;form action=&quot;https://formlyapp.com/your-project&quot;&gt;
+<pre><code>&lt;form action=&quot;https://post.formlyapp.com/your-project&quot;&gt;
 </code></pre>
 
 <p>2. Send form data to us asychronously as either JSON or as a serialized string. You will need to set up a project on the Formly <a href="https://formlyapp.com">site</a>.</p>
 <pre><code>$.ajax({
-    url: 'https://formlyapp.com/your-project',
+    url: 'https://post.formlyapp.com/your-project',
     type: 'POST',
     data: $('#my-form').serialize(),
     success: function (data) {
@@ -132,7 +132,7 @@
 </code></pre>
 
 <p>3. Use hidden form fields to submit forms to us anonymously. You don't need a project for this. You can also send these hidden configuration fields to us asychronously instead.</p>
-<pre><code>&lt;form action=&quot;https://formlyapp.com/custom&quot;&gt;
+<pre><code>&lt;form action=&quot;https://post.formlyapp.com/custom&quot;&gt;
     ...
     &lt;input type=&quot;hidden&quot; name=&quot;config[to]&quot; value=&quot;your@email.com&quot;/&gt;
     &lt;input type=&quot;hidden&quot; name=&quot;config[from]&quot; value=&quot;your@website.com&quot;/&gt;
@@ -190,5 +190,5 @@
 
 <!--
 MkDocs version : 0.17.5
-Build Date UTC : 2018-11-05 16:32:38
+Build Date UTC : 2018-11-16 16:47:19
 -->
